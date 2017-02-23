@@ -14,7 +14,7 @@ vanet.zaikosearch = function(){
 
 vanet.zaikosearch.prototype.setAllCheckButton = function(){
     var seniBtnarea = goog.dom.getElementByClass('seni-btnarea');
-
+    console.log(seniBtnarea);
     //null(検索結果項目が無い)の時は処理しない
     if(goog.isNull(seniBtnarea)){
         return void 0;
@@ -25,7 +25,7 @@ vanet.zaikosearch.prototype.setAllCheckButton = function(){
         {
             'type':'button',
             'class':'btn',
-            'value':'全✔'
+            'value':'全チェック'
         }
     );
     goog.events.listen(

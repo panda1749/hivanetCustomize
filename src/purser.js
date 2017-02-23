@@ -17,12 +17,10 @@ vanet.purser.PageType = {
 vanet.purser = function(){
     this.pageType_ = null;
     this.url_  = window.location.pathname.split('/')[2];
-    console.log(this.url_);
     var scripts = goog.dom.getElementsByTagNameAndClass(goog.dom.TagName.SCRIPT);
 
     this.scriptsSrc_ = goog.array.reduce(scripts,function(rslt,script){
         var src = script.src;
-        console.log(src);
         if(goog.string.startsWith(src,'/vnt/js/')){
             goog.array.insert(rslt,src);
         }
