@@ -45,6 +45,7 @@ vanet.zaikosearch.prototype.setAllCheckButton = function(){
 vanet.zaikosearch.prototype.allCheckClickHandler = function(e){
     var inputs = goog.dom.getElementsByTagNameAndClass(goog.dom.TagName.INPUT);
     this.checked_ = !this.checked_;
+    console.log(this.checked_);
     goog.array.forEach(inputs,function(input){
         if(input.name === 'choice'){
             input.checked = this.checked_;
