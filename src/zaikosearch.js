@@ -10,6 +10,7 @@ goog.require('goog.array');
  */
 vanet.zaikosearch = function(){
     this.setAllCheckButton();
+    this.checked_ = false;
 };
 
 vanet.zaikosearch.prototype.setAllCheckButton = function(){
@@ -31,7 +32,9 @@ vanet.zaikosearch.prototype.setAllCheckButton = function(){
     goog.events.listen(
         btn,
         goog.events.EventType.CLICK,
-        this.allCheckClickHandler
+        this.allCheckClickHandler,
+        false,
+        this
     );
 
     goog.dom.append(seniBtnarea,btn);
@@ -45,7 +48,7 @@ vanet.zaikosearch.prototype.allCheckClickHandler = function(e){
 
     goog.array.forEach(inputs,function(input){
         if(input.name === 'choice'){
-            input.checked = true;
+            input.checked = !this.checked_;
         }
     });
 
