@@ -1,6 +1,6 @@
 console.log(
     'main.js',
-    this,
-    window,
-    document
+    window.location.pathname
 );
+
+//seni-btnare
