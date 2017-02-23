@@ -25,7 +25,7 @@ vanet.zaikosearch.prototype.setAllCheckButton = function(){
         {
             'type':'button',
             'class':'btn',
-            'value':'全チェック'
+            'value':'✔'
         }
     );
     goog.events.listen(
