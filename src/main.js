@@ -9,7 +9,6 @@ vanet.main = function(){
     switch (purser_.getPageType()) {
         case vanet.purser.PageType.ZAIKOSEARCH:
             var zaiko = new vanet.zaikosearch();
-            console.log(zaiko);
             break;
     }
 

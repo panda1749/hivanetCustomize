@@ -15,7 +15,6 @@ vanet.zaikosearch = function(){
 
 vanet.zaikosearch.prototype.setAllCheckButton = function(){
     var seniBtnarea = goog.dom.getElementByClass('seni-btnarea');
-    console.log(seniBtnarea);
     //null(検索結果項目が無い)の時は処理しない
     if(goog.isNull(seniBtnarea)){
         return void 0;
@@ -45,10 +44,10 @@ vanet.zaikosearch.prototype.setAllCheckButton = function(){
  */
 vanet.zaikosearch.prototype.allCheckClickHandler = function(e){
     var inputs = goog.dom.getElementsByTagNameAndClass(goog.dom.TagName.INPUT);
-
+    this.checked_ = !this.checked_;
     goog.array.forEach(inputs,function(input){
         if(input.name === 'choice'){
-            input.checked = !this.checked_;
+            input.checked = this.checked_;
         }
     });
 
