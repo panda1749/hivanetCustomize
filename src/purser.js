@@ -5,20 +5,12 @@ goog.require('goog.array');
 goog.require('goog.string');
 
 /**
- * @enum {string}
- */
-vanet.purser.PageType = {
-    ZAIKOSEARCH:'H6CH160R',
-};
-
-/**
  * @constructor
  */
 vanet.purser = function(){
     this.pageType_ = null;
     this.url_  = window.location.pathname.split('/')[2];
     var scripts = goog.dom.getElementsByTagNameAndClass(goog.dom.TagName.SCRIPT);
-
     this.scriptsSrc_ = goog.array.reduce(scripts,function(rslt,script){
         var src = script.src;
         if(goog.string.startsWith(src,'/vnt/js/')){
@@ -26,6 +18,13 @@ vanet.purser = function(){
         }
         return rslt;
     },[]);
+};
+
+/**
+ * @enum {string}
+ */
+vanet.purser.PageType = {
+    ZAIKOSEARCH:'H6CH160R'
 };
 
 /**

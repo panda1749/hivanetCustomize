@@ -4,11 +4,12 @@ goog.require('vanet.purser');
 goog.require('vanet.zaikosearch');
 
 vanet.main = function(){
-    this.purser_ = new vanet.purser();
+    var purser_ = new vanet.purser();
 
-    switch (this.purser_.getPageType()) {
+    switch (purser_.getPageType()) {
         case vanet.purser.PageType.ZAIKOSEARCH:
-            new vanet.zaikosearch();
+            var zaiko = new vanet.zaikosearch();
+            console.log(zaiko);
             break;
     }
 
