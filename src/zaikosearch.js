@@ -3,6 +3,7 @@ goog.provide('vanet.zaikosearch');
 goog.require('goog.dom');
 goog.require('goog.events.EventType');
 goog.require('goog.events');
+goog.require('goog.array');
 
 /**
  * @constructor
