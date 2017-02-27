@@ -49,13 +49,11 @@ vanet.zaikosearch.prototype.allCheckClickHandler = function(e){
     var btn = e.target;
     var inputs = goog.dom.getElementsByTagNameAndClass(goog.dom.TagName.INPUT);
     var checked = this.checked_ = !this.checked_;
-    console.log(checked);
 
     btn.value = checked?'☒':'☑';
 
     goog.array.forEach(inputs,function(input){
         if(input.name === 'choice'){
-            console.log(input);
             input.checked = checked;
         }
     });
