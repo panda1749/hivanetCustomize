@@ -10,6 +10,9 @@ goog.require('goog.array');
  */
 vanet.zaikosearch = function(){
     this.setAllCheckButton();
+    /**
+     * @type {boolean}
+     */
     this.checked_ = false;
 };
 
@@ -25,7 +28,7 @@ vanet.zaikosearch.prototype.setAllCheckButton = function(){
         {
             'type':'button',
             'class':'btn',
-            'value':'✔'
+            'value':'☑'
         }
     );
     goog.events.listen(
@@ -43,15 +46,17 @@ vanet.zaikosearch.prototype.setAllCheckButton = function(){
  * @param {goog.events.BrowserEvent} e
  */
 vanet.zaikosearch.prototype.allCheckClickHandler = function(e){
+    var btn = e.target;
     var inputs = goog.dom.getElementsByTagNameAndClass(goog.dom.TagName.INPUT);
-    this.checked_ = !this.checked_;
-    console.log(this.checked_);
+    var checked = this.checked_ = !this.checked_;
+    console.log(checked);
+
+    btn.value = checked?'☒':'☑';
+
     goog.array.forEach(inputs,function(input){
         if(input.name === 'choice'){
-            input.checked = this.checked_;
+            console.log(input);
+            input.checked = checked;
         }
     });
-
-    //choice
-
 };
