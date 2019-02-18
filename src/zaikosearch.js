@@ -17,15 +17,20 @@ vanet.zaikosearch = function(){
 };
 
 vanet.zaikosearch.prototype.setAllCheckButton = function(){
+    //既にbuttonがある場合は処理しない
+    var btn = goog.dom.getElement('AllCheckButton');
+    if(!goog.isNull(btn)) return 0;
+
     var seniBtnarea = goog.dom.getElementByClass('seni-btnarea');
     //null(検索結果項目が無い)の時は処理しない
     if(goog.isNull(seniBtnarea)){
         return void 0;
     }
 
-    var btn = goog.dom.createDom(
+    btn = goog.dom.createDom(
         goog.dom.TagName.INPUT,
         {
+            'id':'AllCheckButton',
             'type':'button',
             'class':'btn',
             'value':'☑'
