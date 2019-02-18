@@ -32,7 +32,7 @@ vanet.main = function(){
             var nextInput = document.getElementsByName(nextInputName).item(0);
     
             if(nextInput != null){
-            nextInput.focus();
+            nextInput.select();
             }
         }
         }

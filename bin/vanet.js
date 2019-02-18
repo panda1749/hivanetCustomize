@@ -769,6 +769,6 @@ document.onkeydown = function $document$onkeydown$() {
   var $key$$inline_102_nextInput$$inline_106$$ = event.keyCode, $inputName$$inline_104_srcElement$$inline_103$$ = event.srcElement;
   if ((40 == $key$$inline_102_nextInput$$inline_106$$ || 38 == $key$$inline_102_nextInput$$inline_106$$) && "INPUT" == $inputName$$inline_104_srcElement$$inline_103$$.tagName && "text" == $inputName$$inline_104_srcElement$$inline_103$$.type) {
     var $inputName$$inline_104_srcElement$$inline_103$$ = $inputName$$inline_104_srcElement$$inline_103$$.name, $inputNameNo$$inline_105$$ = parseInt($inputName$$inline_104_srcElement$$inline_103$$.slice(-1), 10);
-    isNaN($inputNameNo$$inline_105$$) || ($key$$inline_102_nextInput$$inline_106$$ = document.getElementsByName($inputName$$inline_104_srcElement$$inline_103$$.slice(0, $inputName$$inline_104_srcElement$$inline_103$$.length - 1) + (40 == $key$$inline_102_nextInput$$inline_106$$ ? $inputNameNo$$inline_105$$ + 1 : $inputNameNo$$inline_105$$ - 1)).item(0), null != $key$$inline_102_nextInput$$inline_106$$ && $key$$inline_102_nextInput$$inline_106$$.focus());
+    isNaN($inputNameNo$$inline_105$$) || ($key$$inline_102_nextInput$$inline_106$$ = document.getElementsByName($inputName$$inline_104_srcElement$$inline_103$$.slice(0, $inputName$$inline_104_srcElement$$inline_103$$.length - 1) + (40 == $key$$inline_102_nextInput$$inline_106$$ ? $inputNameNo$$inline_105$$ + 1 : $inputNameNo$$inline_105$$ - 1)).item(0), null != $key$$inline_102_nextInput$$inline_106$$ && $key$$inline_102_nextInput$$inline_106$$.select());
   }
 };
